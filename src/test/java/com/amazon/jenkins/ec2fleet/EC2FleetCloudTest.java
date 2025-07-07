@@ -2155,7 +2155,7 @@ public class EC2FleetCloudTest {
     public void descriptorImpl_doTestConnection_NoMissingPermissions() throws Exception {
         final AwsPermissionChecker awsPermissionChecker = mock(AwsPermissionChecker.class);
         when(awsPermissionChecker.getMissingPermissions(null)).thenReturn(new ArrayList<>());
-        // // // // // // // // // // // // // // // PowerMockito.whenNew(AwsPermissionChecker.class).withAnyArguments().thenReturn(awsPermissionChecker);
+        // // // // // // // // // // // // // // // // // PowerMockito.whenNew(AwsPermissionChecker.class).withAnyArguments().thenReturn(awsPermissionChecker);
 
         final FormValidation formValidation = new EC2FleetCloud.DescriptorImpl().doTestConnection("credentials", null, null, null);
 
